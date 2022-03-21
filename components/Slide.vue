@@ -10,8 +10,8 @@
             class="pa-4"
             active-class="success"
             show-arrows
+            :class = "(showCard)&&'test-c'"
             >
-            
             <v-slide-item
                 v-for="n in 15"
                 :key="n"
@@ -24,7 +24,8 @@
                 class="ma-4"
                 height="180"
                 width="300"
-                @click="toggle(), test()"
+                @mouseenter="toggle(), test()"
+                @mouseleave="toggle(), test()"
                 >
                 <v-img
                     src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
@@ -38,24 +39,20 @@
                 >
                 
                     <v-scale-transition>
-                    <!-- <v-icon
-                        v-if="active"
-                        color="white"
-                        size="548"
-                        v-text="'mdi-close-circle-outline'"
-                    ></v-icon> -->
                      <v-card
                         v-if="active"
                         :color="'blue'"
                         class="ma-4 card-nested-one"
-                        height="400"
-                        width="600"
-                        @click="toggle(), test()"
+                        @click="dialog = true"
                         >
                         <v-img
                             height="250"
                             src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
                             ></v-img>
+
+                            
+
+
                         </v-card>
                     </v-scale-transition>
                 </v-row>
@@ -64,6 +61,35 @@
             </v-slide-item>
             </v-slide-group>
     </v-sheet>
+    <v-row
+            justify="center"
+            style="heigth:auto; width: auto;"
+        >
+        <v-dialog
+            v-model="dialog"
+            justify="center"
+            scrollable
+            max-width="80vw"
+            max-heigth = "80vh"
+            >
+                <v-card
+            :color="'pink'"
+            class="modal-card"
+            height="230vh"
+            >
+            <v-img
+                src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+                ></v-img>
+                <v-row
+                    class="fill-height"
+                    align="center"
+                    justify="center"
+                >
+                hello
+                </v-row>
+            </v-card>
+            </v-dialog>
+        </v-row>
     </div>
 </template>
 
@@ -71,11 +97,25 @@
 export default {
     data: () => ({
       model: null,
+      showCard: false,
+      dialog: false,
     }),
     methods:{
         test(){
             console.log('hey!');
+            this.showCard = !this.showCard;
         }
+    },
+    computed: {
+    showInside() {
+    if (this.showCard) {
+       return {
+         overflow: 'visible !important',
+         };
+        } else {
+        return '';
+        }
+    }
     }
 }
 </script>
