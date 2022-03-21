@@ -26,3 +26,47 @@
     width: 380px !important;
     transition: 0.4s;
 }
+
+.v-slide-group__wrapper{
+    // overflow-y: visible !important;
+    // overflow-x: hidden !important;
+    // overflow: visible !important;
+    // contain: none !important;
+    
+    // max-width: 60vw !important;
+}
+.card-nested-one{
+    height: 393px !important;
+    width: 527px !important;
+    max-width: 700px !important;
+    z-index: 2 !important;
+    position: absolute !important;
+    top: -134px;
+}
+// .v-slide-group__next{
+//     z-index: 9999 !important;
+//     position: absolute;
+// }
+// .v-slide-group__content{
+//     overflow-x: hidden !important;
+// }
+
+// .v-slide-group__next, .v-slide-group__prev{
+//     align-items: center;
+//     display: flex;
+//     flex: 0 1 52px;
+//     justify-content: center;
+//     min-width: 52px;
+//     position: absolute;
+//     top: 111px;
+//     color: red;
+//     background: red;
+//     left: 95vw;
+//     z-index: 99;
+// }
+// .button-index-superior{
+//     position: relative !important;
+//     left: 94vw !important;
+//     top: -19vw !important;
+//     background-color: red !important;
+// }

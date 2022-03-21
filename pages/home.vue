@@ -1,7 +1,8 @@
 <template>
   <div>
     <img class="cover-image" src="~assets/images/fantastic.jpg" />
-    <Slide/>
+      <Slide/>
+       <Slide/>
     </div>
 </template>
 
