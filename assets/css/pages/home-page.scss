@@ -15,28 +15,13 @@
     width: 100vw;
     object-fit: cover;
     object-position: 50% 0%;
-    // box-shadow: 0 4px 2px -2px black;
 }
-.hover-slider{
-    align-self: center;
-
-}
-.hover-slider:hover {
-    height: 247px !important;
-    width: 380px !important;
-    transition: 0.4s;
-}
-
-.test-c .v-slide-group__wrapper{
-    // overflow-y: visible !important;
-    // overflow-x: hidden !important;
+.d-visible .v-slide-group__wrapper{
     overflow: visible !important;
     contain: none !important;
-    
-    // max-width: 60vw !important;
-}
+    }
 .card-nested-one{
-    height: 353px !important;
+    height: 400px !important;
     width: 397px !important;
     max-width: 700px !important;
     z-index: 2 !important;
@@ -51,4 +36,28 @@
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
     background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.text-image-small{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.img-small{
+    height: inherit;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.text-dialog{
+    padding: 30px; 
+    color: white;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 1rem;
+}
+.title-dialog{
+    text-align: center;
+    color: white;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.7rem;
 }

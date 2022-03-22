@@ -1,22 +1,29 @@
 
  export const state = () => ({
-    counter: 'helloo'
+    urlImage: '',
+    title: '',
+    description: '',
+    voteAverage: null,
+
   });
   
   export const mutations = {
-    setPosts(state, posts){
-      state.loadedPosts = posts;
+    setMovie(state, itemMovie){
+      state.urlImage = itemMovie.backdrop_path;
+      state.title = itemMovie.title;
+      state.description = itemMovie.overview;
+      state.voteAverage = itemMovie.vote_average;
     }
   };
   
   export const actions = {
-    setPosts(vuexContext, posts){
-      vuexContext.commit('setPosts', posts);
+    setMovie(vuexContext, itemMovie){
+      vuexContext.commit('setMovie', itemMovie);
     }
   };
   
   export const getters = {
-    loadedPosts(state){
-      return state.loadedPosts;
+    loadedMovies(state){
+      return state.loadedMovies;
     }
   };

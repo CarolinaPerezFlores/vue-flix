@@ -1,11 +1,8 @@
 <template>
-  <!-- <Home/> -->
   <div>
       <v-app>
         <Navbar/>
-
           <Home/>
-
       </v-app>
   </div>
   
@@ -18,7 +15,7 @@ export default {
   name: 'IndexPage',
   components: {
         Navbar,
-        Home
+        Home,
     },
 }
 </script>
