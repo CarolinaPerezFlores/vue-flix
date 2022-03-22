@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a,b){return {staticAssetsBase:"\u002Fvue-flix\u002F_nuxt\u002Fstatic\u002F1647940349",layout:"default",error:a,state:{urlImage:b,title:b,description:b,voteAverage:a},serverRendered:true,routePath:"\u002Fhome",config:{_app:{basePath:"\u002Fvue-flix\u002F",assetsPath:"\u002Fvue-flix\u002F_nuxt\u002F",cdnURL:a}}}}(null,""));
